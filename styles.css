@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    background-color: #757bc8;
+    font-family: 'Open Sans', arial;
+}
+
+
+
+.game-wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.head {
+    color: #e0c3fc;
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.button-wrap {
+    display: flex;
+    gap: 2em;
+}
+
+.btn {
+    padding: 1em;
+    width: 8em;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #e0c3fc;
+    color: #171A3A;
+}
+
+.result {
+    color: #171A3A;
+}
