@@ -27,7 +27,7 @@ function playRound(playerSelection) {
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
         
         playerScore++
-        result = `Player Wins! ${playerSelection} beats ${computerSelection}. Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+        result += `<br>Player Wins! ${playerSelection} beats ${computerSelection}. Player Score: ${playerScore}, Computer Score: ${computerScore}`;
 
             if (playerScore === 5) {
             result += '<br><br>Player wins, refresh the page to play again'
@@ -39,7 +39,7 @@ function playRound(playerSelection) {
             (playerSelection === 'scissors' && computerSelection === 'rock')) {
                 
             computerScore++
-            result = `Computer Wins! ${computerSelection} beats ${playerSelection}. Player Score: ${playerScore}, Computer Score: ${computerScore}`;
+            result += `<br>Computer Wins! ${computerSelection} beats ${playerSelection}. Player Score: ${playerScore}, Computer Score: ${computerScore}`;
 
             if (computerScore === 5) {
                 result += '<br><br>Computer wins, refresh the page to play again'
@@ -47,7 +47,7 @@ function playRound(playerSelection) {
                 }
 
         } else {
-        result = `It\'s a tie. Player Score: ${playerScore}, Computer Score: ${computerScore}`
+        result += `It\'s a tie. Player Score: ${playerScore}, Computer Score: ${computerScore}`
     }
 
     document.getElementById('result').innerHTML = result
