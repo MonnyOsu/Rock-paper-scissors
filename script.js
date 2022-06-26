@@ -1,10 +1,12 @@
 let playerScore = 0;
 let computerScore = 0;
+let gameOver = false;
 
 let images = document.querySelectorAll('img');
 let result = document.getElementById('result');
 let score = document.getElementById('score');
 let finalResult = document.getElementById('final-result')
+let repeat = document.getElementById('repeat')
 
 // function to disable buttons after win
 function disableImage() {
@@ -20,6 +22,15 @@ function resetGame() {
     result.textContent = '';
     score.textContent = '';
     finalResult.textContent = '';
+}
+
+function resetGameButton() {
+    const repeatButton = document.createElement('button');
+    const repeatContent = document.createTextNode("Reset");
+    repeatButton.appendChild(repeatContent);
+    repeatButton.classList.add("repeat-btn")
+    repeat.appendChild(repeatButton);
+
 }
 
 // function to randomly select computers move
@@ -77,5 +88,7 @@ images.forEach(image => {
         }
     })
 })
+
+
 
 
